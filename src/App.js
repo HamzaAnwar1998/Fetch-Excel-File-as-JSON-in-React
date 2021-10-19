@@ -80,7 +80,7 @@ function App() {
       <div className='viewer'>
         {excelData===null&&<>No file selected</>}
         {excelData!==null&&(
-          <>
+          <div className='table-responsive'>
             <table className='table'>
               <thead>
                 <tr>
@@ -88,14 +88,16 @@ function App() {
                   <th scope='col'>First Name</th>
                   <th scope='col'>Last Name</th>
                   <th scope='col'>Gender</th>
-                  <th scope='col'>Age</th>                  
+                  <th scope='col'>Country</th>
+                  <th scope='col'>Age</th>
+                  <th scope='col'>Date</th>                  
                 </tr>
               </thead>
               <tbody>
                 <Data excelData={excelData}/>
               </tbody>
             </table>            
-          </>
+          </div>
         )}       
       </div>
 
